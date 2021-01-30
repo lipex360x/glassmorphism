@@ -1,0 +1,224 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "lato", sans-serif;
+  font-size: 62.5%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(
+    to left bottom,
+    rgba(120, 177, 215, 1),
+    rgba(200, 102, 164, 0.25)
+  );
+}
+
+.glass {
+  display: flex;
+  position: relative;
+  width: 80%;
+  height: 80vh;
+  background: linear-gradient(
+    to left bottom,
+    rgba(255, 255, 255, 0.12),
+    rgba(255, 255, 255, 0.45)
+  );
+  backdrop-filter: blur(5px);
+  backdrop-filter: blur(1.5px);
+  -webkit-backdrop-filter: blur(1.5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+
+div.content,
+div.card {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 50%;
+  /* position: relative; */
+}
+
+div.content {
+  justify-content: space-around;
+}
+
+div.text {
+  /* border: 1px solid black; */
+  margin: 5rem auto 0 auto;
+  width: 80%;
+}
+
+div.content h1 {
+  font-size: 5rem;
+  line-height: 65px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+div.content p {
+  color: black;
+  margin: 3rem 0;
+  font-size: 1.9rem;
+  width: 79%;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+div.input {
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.5));
+  /* filter: hue-rotate(50deg); */
+  backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+  width: 70%;
+  margin: 1rem 0 10rem 10rem;
+  z-index: 1;
+  height: 65px;
+  border: 1px solid white;
+}
+
+
+div.input .txt input {
+  line-height: 65px;
+  background: transparent;
+  outline: none;
+  border: none;
+  margin: 0 0 0 5rem;
+  color: black;
+  width: 70%;
+  font-size: 1.9rem;
+}
+
+div.input .txt input::placeholder {
+  color: white;
+}
+
+div.btn button {
+  position: relative;
+  padding: 15px 20px;
+  background: #7BBDBF;
+  text-transform: uppercase;
+  color: white;
+  outline: none;
+  border: 0;
+  margin-right: 4rem;
+  cursor: pointer;
+
+}
+
+div.btn button::after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background: rgb(247, 0, 0);
+  bottom: 0;
+  left: 0;
+  transition: .3s;
+}
+
+div.btn button:hover::after {
+  width: 100%;
+}
+
+div.card {
+  position: relative;
+}
+
+div.glass_card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  backdrop-filter: blur(3px);
+  box-shadow: 1px 1px 1px 0 rgba(255, 255, 255, 0.4);
+  position: absolute;
+  width: 45rem;
+  height: 25rem;
+  top: 50%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+div.glass_card h2 {
+  font-size: 2.1rem;
+  margin: 2rem;
+  font-weight: lighter;
+  color: white;
+}
+
+div.glass_card .chip_name {
+  display: flex;
+  align-items: center;
+}
+
+div.glass_card img {
+  margin: 3rem 2rem;
+  width: 6rem;
+}
+
+div.glass_card span {
+  display: block;
+  font-size: 2.1rem;
+  color: white;
+}
+
+div.glass_card p {
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem;
+  font-size: 2.1rem;
+  color: white;
+  font-weight: lighter;
+}
+
+.circle1,
+.circle2,
+.circle3 {
+  position: absolute;
+}
+
+.circle1 {
+  top: 0%;
+  left: 0%;
+  transform: translate(-30%, -30%) rotate(45deg);
+}
+
+.circle2 {
+  left: 150px;
+  bottom: 70px;
+}
+
+.circle3 {
+  top: 50%;
+  left: 85%;
+  transform: translate(-50%, -50%);
+}
+
+.circle1 img {
+  width: 11rem;
+}
+
+
+.circle2 img {
+  width: 11rem;
+}
+
+.circle3 img {
+  width: 28rem;
+}
+
+@media (min-width: 1921px) {
+  .circle2 img {
+      width: 20rem;
+  }
+}
